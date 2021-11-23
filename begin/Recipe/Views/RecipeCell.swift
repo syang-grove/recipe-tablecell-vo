@@ -46,10 +46,10 @@ class RecipeCell: UITableViewCell {
       difficultyValue = recipe.difficulty
       difficultyLabel.text = difficultyString
 
-//      applyAccessibility0(recipe)
+      applyAccessibility0(recipe)
 //      applyAccessibility1(recipe)
 //      applyAccessibility2(recipe)
-      applyAccessibility3(recipe)
+//      applyAccessibility3(recipe)
   }
   
   var difficultyString: String {
@@ -201,9 +201,9 @@ extension RecipeCell {
                 difficultyLabel.accessibilityValue = "\(value)"
         }
 
-        // self.accessibilityElements = [dishNameLabel, foodImageView, difficultyLabel]
-        self.accessibilityElements = [difficultyLabel, foodImageView, dishNameLabel] // for demo 1
-        self.accessibilityElements = [dishNameLabel, foodImageView] // for demo 2
+        self.accessibilityElements = [dishNameLabel, foodImageView, difficultyLabel]
+        // self.accessibilityElements = [difficultyLabel, foodImageView, dishNameLabel] // for demo 1
+        // self.accessibilityElements = [dishNameLabel, foodImageView] // for demo 2
 
         // Dynamic text
         dishNameLabel.font = .preferredFont(forTextStyle: .body)

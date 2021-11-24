@@ -46,10 +46,10 @@ class RecipeCell: UITableViewCell {
       difficultyValue = recipe.difficulty
       difficultyLabel.text = difficultyString
 
-      applyAccessibility0(recipe)
+//      applyAccessibility0(recipe)
 //      applyAccessibility1(recipe)
 //      applyAccessibility2(recipe)
-//      applyAccessibility3(recipe)
+      applyAccessibility3(recipe)
   }
   
   var difficultyString: String {
@@ -101,7 +101,6 @@ extension RecipeCell {
         contentView.accessibilityHint = "Double tap for more information"
         contentView.isAccessibilityElement = true
 
-        // This part will not be executed because of a cell can't be accessibile in entirety and at the same time accessible of individual elements.
         dishNameLabel.isAccessibilityElement = true
         dishNameLabel.accessibilityTraits = .none
         dishNameLabel.accessibilityLabel = recipe.name
@@ -167,7 +166,6 @@ extension RecipeCell {
             case .rating(let value):
                 difficultyLabel.accessibilityValue = "\(value)"
         }
-
 
         // Dynamic text
         dishNameLabel.font = .preferredFont(forTextStyle: .body)
